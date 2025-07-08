@@ -1,0 +1,13 @@
+FROM node:14.17.3
+
+# Set work directory
+WORKDIR /frontend
+
+# Copy project
+COPY . .
+
+RUN npm install
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
